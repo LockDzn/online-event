@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useParams } from 'react-router-dom'
 
 import YouTube, { Options } from 'react-youtube'
 
 import Header from '../../components/Header'
 import Menu from '../../components/Menu'
 
-import { ClassProvider } from '../../contexts/ClassContext'
+import { ClassContext, ClassProvider } from '../../contexts/ClassContext'
 
 import { Container, Main, Description } from './styles'
 
+type ParamsProps = {
+  classNumber: string
+}
+
 const Home: React.FC = () => {
   document.title = 'Home'
+
+  const { selectedEvent } = useContext(ClassContext)
 
   const opts: Options = {
     height: '415',
@@ -29,7 +36,7 @@ const Home: React.FC = () => {
             </section>
             <Menu />
             <Description>
-              <h2>Aula 01 - Liftoff</h2>
+              <h2>Aula {selectedEvent?.classNumber}-</h2>
               <p>
                 We&apos;re go for launch. É hora de decolar e partir rumo ao
                 próximo nível. Esse é o começo da nossa missão.

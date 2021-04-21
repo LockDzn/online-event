@@ -1,0 +1,74 @@
+[
+  {
+    "week": "Segunda",
+    "day": "19 abr",
+    "events": [
+      {
+        "title": "Liftoff",
+        "hour": "08:00",
+        "videoID": "PR-duMh19FY",
+        "classNumber": 1,
+        "released": true
+      }
+    ]
+  },
+  {
+    "week": "Terça",
+    "day": "20 abr",
+    "events": [
+      {
+        "title": "Maximum Speed",
+        "hour": "08:00",
+        "videoID": "_EyZUTDAH0U",
+        "classNumber": 2,
+        "released": true
+      }
+    ]
+  },
+  {
+    "week": "Quarta",
+    "day": "21 abr",
+    "events": [
+      {
+        "title": "In Orbit",
+        "hour": "08:00",
+        "videoID": "",
+        "classNumber": 3,
+        "released": false
+      }
+    ]
+  },
+  {
+    "week": "Quinta",
+    "day": "22 abr",
+    "events": [
+      {
+        "title": "Landing",
+        "hour": "08:00",
+        "videoID": "",
+        "classNumber": 4,
+        "released": false
+      }
+    ]
+  },
+  {
+    "week": "Sexta",
+    "day": "23 abr",
+    "events": [
+      {
+        "title": "Surface Exploration",
+        "hour": "08:00",
+        "videoID": "",
+        "classNumber": 5,
+        "released": false
+      },
+      {
+        "title": "Acelerando sua carreira",
+        "hour": "13:00",
+        "videoID": "",
+        "classNumber": 6,
+        "released": false
+      }
+    ]
+  }
+]

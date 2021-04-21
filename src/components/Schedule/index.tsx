@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+
+import { ClassContext } from '../../contexts/ClassContext'
 
 import { Container } from './styles'
 
@@ -9,11 +12,16 @@ type Props = {
     title: string
     hour: string
     classNumber: number
+    released: boolean
   }[]
-  isSelected: boolean
+  onClick?: () => void
 }
 
-const Schedule = ({ week, day, events, isSelected }: Props) => {
+const Schedule = ({ week, day, events, onClick }: Props) => {
+  const history = useHistory()
+
+  const { handleChangeClass, classNumber } = useContext(ClassContext)
+
   return (
     <Container>
       <div className="header">
@@ -22,8 +30,22 @@ const Schedule = ({ week, day, events, isSelected }: Props) => {
       </div>
 
       {events.map(event => (
-        <div className="wap" key={`${week}_${event.classNumber}`}>
-          <div className={`event ${isSelected ? 'isSelected' : ''}`}>
+        <div
+          className="wap"
+          onClick={() =>
+            event.released ? handleChangeClass(event.classNumber) : null
+          }
+          key={`${week}_${event.classNumber}`}
+        >
+          <div
+            className={`event ${
+              classNumber === event.classNumber ? 'isSelected' : ''
+            } ${
+              classNumber !== event.classNumber &&
+              event.released &&
+              'isReleased'
+            }`}
+          >
             <div className="borderArrow"></div>
             <p>
               <span>{event.hour}h</span> - Aula{' '}

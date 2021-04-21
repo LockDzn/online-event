@@ -34,6 +34,57 @@ export const Container = styled.div`
 
     border-radius: 5px;
 
+    opacity: 0.5;
+
+    p {
+      color: #e1e1e6;
+    }
+
+    span {
+      color: #a8a8b3;
+      font-weight: bold;
+    }
+
+    margin: 16px 0 18px;
+
+    background: #242429;
+    border: none;
+
+    .borderArrow {
+      display: none;
+      background: #121214;
+      border: 1.5px solid #00d4ff;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      top: 0;
+      left: -6px;
+      bottom: 0;
+      transform: rotate(-45deg);
+      padding: 1px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border-bottom: 0;
+      border-right: 0;
+      margin: auto;
+    }
+  }
+
+  .isReleased {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+
+    font-size: 18px;
+    border-radius: 5px;
+    opacity: 1;
+
+    cursor: pointer;
+
+    p {
+      color: #e1e1e6;
+    }
+
     span {
       color: #a8a8b3;
       font-weight: bold;
@@ -68,11 +119,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     padding: 1rem 1rem;
-    cursor: pointer;
 
     font-size: 18px;
-
     border-radius: 5px;
+    opacity: 1;
+
+    cursor: pointer;
 
     span {
       color: #00d4ff;
